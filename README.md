@@ -14,6 +14,12 @@ An AI-powered travel assistant built with **LangChain**, **Groq**, and **Streaml
 
 ---
 
+## 📷 Demo
+
+![Screenshot](MyTripPlanner.png)
+
+--- 
+
 ## 🚀 How It Works
 
 The app uses 3 AI agents:
