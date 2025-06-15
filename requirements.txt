@@ -1,0 +1,9 @@
+streamlit
+crewai
+langchain
+langchain_groq
+langchain_community
+crewai-tools
+duckduckgo-search
+streamlit_lottie
+python-dotenv
