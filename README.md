@@ -70,9 +70,20 @@ GROQ_API_KEY=your_groq_api_key_here
 streamlit run app.py
 ```
 
-## 
-📄 Example Output
+## 📄 Example Output
 
-- Travel plans are generated in [Markdown (.md)]() format
+- Travel plans are generated in [Travel_Plane_Kashmir.md](https://github.com/UzmaKhatun/MyTripPlanner-AI/blob/main/Travel_Plan_Kashmir.md) format
 - Downloadable directly from the app
 
+---
+
+## 🙌 Credits
+Created with ❤️ using LangChain and Groq's blazing-fast LLaMA 3 models.
+
+---
+
+## Author
+Uzma Khatun<br>
+🔗 Connect on [LinkedIn](
+https://www.linkedin.com/in/uzma-khatun-88b990334/
+)
