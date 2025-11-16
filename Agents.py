@@ -1,8 +1,9 @@
 import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain.agents import initialize_agent, Tool
-from langchain.agents.agent_types import AgentType
+# from langchain.agents import initialize_agent, Tool
+# from langchain.agents.agent_types import AgentType
+from langchain.agents import create_react_agent, AgentExecutor
 from Tools import search_web_tool
 
 load_dotenv()
@@ -16,30 +17,33 @@ llm = ChatGroq(
 
 
 # Initialize LangChain agents using tools
-guide_expert = initialize_agent(
+# guide_expert = initialize_agent(
+guide_expert = AgentExecutor(
     tools=[search_web_tool],
     llm=llm,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    agent=AgentType.create_react_agent,
     verbose=True,
     agent_kwargs={
         "prefix": "You are a local city guide helping users with places to visit.",
     }
 )
 
-location_expert = initialize_agent(
+# location_expert = initialize_agent(
+location_expert = AgentExecutor(
     tools=[search_web_tool],
     llm=llm,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    agent=AgentType.create_react_agent,
     verbose=True,
     agent_kwargs={
         "prefix": "You are a travel logistics expert helping users with essential travel info.",
     }
 )
 
-planner_expert = initialize_agent(
+# planner_expert = initialize_agent(
+planner_expert = AgentExecutor(
     tools=[search_web_tool],
     llm=llm,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    agent=AgentType.create_react_agent,
     verbose=True,
     agent_kwargs={
         "prefix": "You are a professional travel planner. Use the information to build a travel plan.",
